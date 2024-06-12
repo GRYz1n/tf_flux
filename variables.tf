@@ -1,14 +1,3 @@
-variable "GOOGLE_PROJECT" {
-  type        = string
-  description = "GCP project to use"
-}
-
-variable "GOOGLE_REGION" {
-  type        = string
-  default     = "us-central1-c"
-  description = "GCP region to use"
-}
-
 variable "GITHUB_OWNER" {
   type        = string
   description = "GitHub owner repository to use"
@@ -29,6 +18,24 @@ variable "FLUX_GITHUB_TARGET_PATH" {
   type        = string
   default     = "clusters"
   description = "Flux manifests subdirectory"
+}
+
+variable "GOOGLE_PROJECT" {
+  type = string
+}
+
+variable "GOOGLE_REGION" {
+  type = string
+}
+
+variable "GKE_NUM_NODES" {
+  description = "number of nodes in GKE cluster"
+  type        = string
+}
+
+variable "GKE_MACHINE_TYPE" {
+  description = "type of machines that will be created for GKE cluster"
+  type        = string
 }
 
 
